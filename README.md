@@ -33,7 +33,7 @@ Building the Module
 You'll first need to install the Apache development packages for your distro (e.g. httpd-devel
 on CentOS).  Then, you can use the apxs tool to build the module:
 
-`sudo apxs -i -a -c mod_wplogin.c`
+    sudo apxs -i -a -c mod_wplogin.c
 
 apxs should also add the module to your httpd.conf automatically.  So, after building you can
 restart Apache.  To test, go to wp-login.php.  Following the redirects, you should see an
@@ -42,7 +42,7 @@ without this cookie present should return a 401 response.
 
 You can test the plugin with curl like this:
 
-`curl -s -v -L -d "pwd=your_password" -d "log=your_username" -d "wp-submit=Log%20In" http://example.org/wp-login.php`
+    curl -s -v -L -d "pwd=your_password" -d "log=your_username" -d "wp-submit=Log%20In" http://example.org/wp-login.php
 
 You should see the 401 response in the output.
 
