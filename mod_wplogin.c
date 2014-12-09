@@ -57,7 +57,7 @@ static int wplogin_handler(request_rec *r)
         ap_rprintf(r, "<html>");
         ap_rprintf(r, "<head>");
         ap_rprintf(r, "<script type=\"text/javascript\">");
-        ap_rprintf(r, "document.cookie=\"wplogin=authorized; expires=0\";");
+        ap_rprintf(r, "document.cookie=\"wplogin=authorized\";");
         ap_rprintf(r, "window.location=\"%s\";", r->uri);
         ap_rprintf(r, "</script>");
         ap_rprintf(r, "</head>");
